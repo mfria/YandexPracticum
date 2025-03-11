@@ -1,0 +1,382 @@
+.page {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  min-width: 1100px; /* ограничение по минимальной ширине страницы */
+  max-width: 1600px; /* ограничение по максимальной ширине страницы */
+  margin: 0 auto; /* для экранов больше 1600px отцентрировали весь контент */
+}
+
+
+
+
+/* секция header */
+
+.header {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  background-color: #f2f2f2;
+  margin-bottom: 100px;
+  position: relative;      /* --- ? --- */
+  display: flex;      /* --- ? --- */
+  overflow: hidden; /* переполняющее содержимое не отображается */
+}
+
+.logo_place_header {
+  position: absolute;
+  height: 32px;
+  width: 228px;
+  margin-left: 64px;
+  margin-top: 30px;
+}
+
+.header__title {
+  position: absolute;
+  align-self: center;
+  font-size: 102px; /* размер шрифта */
+  line-height: 96px; /* высота строки */
+  font-weight: 600; /* начертание */
+  width: 730px;
+  margin-left: 64px;
+  z-index: 3;      /* этот элемент лежит выше main-illustration */
+}
+
+.header__subtitle {
+  position: absolute;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  width: 388px;
+  bottom: 30px;
+  left: 64px;
+  margin: 0;
+  z-index: 3;      /* этот элемент лежит выше main-illustration */
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.header__main-illustration {
+  position: absolute;
+  width: 765px;
+  height: 608px;
+  bottom: 0;
+  right: 0;
+  z-index: 2;       /* этот элемент лежит выше square-pic */
+}
+
+.header__square-pic {
+  position: absolute;
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  right: 0;
+  top: 64px;
+  z-index: 1;      /* этот элемент лежит нижним слоем */
+}
+
+
+
+
+/* секция description */
+
+.description {
+  background-color: white;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+
+/* блок two-columns */
+
+.two-columns {
+  display: flex;      /* --- ? --- */
+  width: 80%;
+  justify-content: space-between;      /* --- ? --- */
+  justify-self: center;      /* --- ? --- */
+}
+
+.two-columns__brief {
+  display: flex;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #2f80ed;
+  width: 175px;
+  margin: 0;
+}
+
+.two-columns__main-text {
+  display: flex;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  min-width: 784px;
+  gap: 30px;
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.two-columns__paragraph {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  color: black;
+  margin: 0;
+}
+
+.two-columns__span-accent {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  color: black;
+}
+
+
+
+/* секция digits */
+
+.digits {
+  background-color: white;
+  margin-bottom: 100px;
+}
+
+.section-title {
+  width: 60%;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  margin: 0 auto 20px auto;
+  z-index: 2;
+  position: relative;
+}
+
+.section-subtitle {
+  width: 60%;
+  text-align: center;
+  position: relative;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+
+
+/* блок table*/
+
+.table {
+  display: flex;
+  list-style: none;
+  width: 1100px;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__heading {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table__text {
+  margin-top: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+
+/* секция feynman */
+
+.feynman {
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  min-height: 890px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feynman__image {
+  position: absolute;
+  height: 637px;
+  width: 867px;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  z-index: 1;      /* этот элемент лежит нижним слоем */
+}
+
+.feynman__title {
+  margin: 100px 0 70px 0;
+  width: 648px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  z-index: 2;       /* этот элемент лежит выше feynman__image */
+}
+
+.feynman__subtitle {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  z-index: 2;       /* этот элемент лежит выше feynman__image */
+}
+
+.feynman__link {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+
+
+/* ----------------------------------- КОРОЛЬ УМЕР ДА ЗДРАВСТВУЕТ КОРОЛЬ ----------------------------------- */
+/* секция kaufman */
+
+.kaufman {
+  background-color: #1f1f1f;
+  padding: 90px 0 90px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.kaufman__triangle {
+  height: 877px;
+  width: 877px;
+  position: absolute;
+  top: 0;
+  right: -250px;
+  z-index: 1;
+}
+
+
+
+/* блок table модификатор theme в значении dark */
+
+.section-title_theme_dark {
+  color: white;
+}
+
+.ection-subtitle_theme_dark {
+  color: white;
+}
+
+.table_theme_dark {
+  color: white;
+}
+
+.table__cell_theme_dark {
+  width: 200px;
+  margin-right: 0;
+  margin-top: 80px;
+  z-index: 2;
+}
+
+/* .table__heading_theme_dark {
+  
+} */
+
+/* .table__text_theme_dark {
+  
+} */
+
+
+
+
+/* секция footer */
+
+.footer {
+  background-color: #1f1f1f;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: #f2f2f2;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 250px;
+}
+
+.footer__columns_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.logo_place_footer {
+  width: 228px;
+  height: 32px;
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 18px 0;
+}
+
+/* .footer__columns_content_info {
+  
+} */
+
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.footer__columns-links {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 20px 0 16px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__column-link {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #f2f2f2;
+  opacity: 1;
+}
+
+/* .footer__columns_content_social {
+  
+} */
+
+.footer__social-icons {
+  height: 16px;
+  width: 16px;
+}
